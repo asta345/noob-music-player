@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title>MUSIC PLAYER</title>
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
     <link rel="stylesheet" href="style.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://kit.fontawesome.com/2d9b67a497.js" crossorigin="anonymous"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- CSS only -->
-
    </head>
-<body>
-  <nav>
+   <!-- side Navbar -->
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">MusicPlayer</div>
+      
+        <div class="logo_name">MUSIC PLAYER</div>
+        <i class='bx bxs-music bx-spin bx-rotate-90' ></i>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
+    <!-- Nav list icons -->
     <ul class="nav-list">
       <li>
           <i class='bx bx-search' ></i>
@@ -45,9 +41,9 @@
      <li>
        <a href="#">
          <i class='bx bx-heart' ></i>
-         <span class="links_name">Favourites</span>
+         <span class="links_name">Saved</span>
        </a>
-       <span class="tooltip">Favourites</span>
+       <span class="tooltip">Saved</span>
      </li>
      <li>
        <a href="#">
@@ -55,527 +51,38 @@
          <span class="links_name">Setting</span>
        </a>
        <span class="tooltip">Setting</span>
-      </li>
-      <a href="#">
-        <i class='bx bx-sun' ></i>
-        <span class="links_name" onclick="myFunction()">Day Mode</span>
-      </a>
-      <span class="tooltip"></span>
      </li>
-
+     <li>
+       <a href="#">
+     <i class='bx bxs-sun bx-flashing bx-rotate-90' ></i>
+     <span class="links_name">Daymode</span>
+   </a>
+   <span class="tooltip">Daymode</span>
+ </li>
+     <!-- Profile -->
      <li class="profile">
          <div class="profile-details">
-           <img src="942639.jpg" alt="profileImg">-->
+           <img src="profile.jpg" alt="profileImg">
            <div class="name_job">
-             <div class="name">BOOFIL</div>
-             <div class="job">NOOB Desginer</div>
+             <div class="name">Avinash</div>
+             <div class="job"> Noob Web Designer</div>
            </div>
          </div>
          <i class='bx bx-log-out' id="log_out" ></i>
      </li>
     </ul>
-  </div>
-</nav>
-<nav role='navigation'>
-  <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-    <input type="checkbox" />
-    
-    <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-    <span></span>
-    <span></span>
-    <span></span>
-    
-    <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-    <ul id="menu">
-      <a href="#"><li>Home</li></a>
-      <a href="#"><li>About</li></a>
-      <a href="#"><li>Info</li></a>
-      <a href="#"><li>Contact</li></a>
-      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-    </ul>
-  </div>
-</nav>
-   <div class="top1">
-   <a class="top2" href="#">All</a>
-   <a  class="top3 "href="#">Hindi</a>
-   <a   class="top4"href="#">1980's Hits</a>
-   <a  class="top5"href="#">Telugu</a>
-   <a  class="top6"href="#">Tamil</a>
-   <a  class="top7"href="#">English</a>
-   <a class="top8" href="#">Kannada</a>
-   <a class="top9" href="#">Malayam</a>
-   </div>
-   <div class="slider">
-		<!-- fade css -->
-		<div class="myslide fade">
-			<div class="txt">
-				<h1>IMAGE 1</h1>
-				
-			</div>
-			<img src="img1.jpg" style="width: 100%; height: 100%;">
-		</div>
-		
-		<div class="myslide fade">
-			<div class="txt">
-				<h1>IMAGE 2</h1>
-				
-			</div>
-			<img src="img2.jpg" style="width: 100%; height: 100%;">
-		</div>
-		
-		<div class="myslide fade">
-			<div class="txt">
-				<h1>IMAGE 3</h1>
-				
-			</div>
-			<img src="img3.jpg" style="width: 100%; height: 100%;">
-		</div>
-		
-		<div class="myslide fade">
-			<div class="txt">
-				<h1>IMAGE 4</h1>
-			
-			</div>
-			<img src="img4.jpg" style="width: 100%; height: 100%;">
-		</div>
-		
-		<div class="myslide fade">
-			<div class="txt">
-				<h1>IMAGE 5</h1>
-				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
-			</div>
-			<img src="img5.jpg" style="width: 100%; height: 100%;">
-		</div>
-		<!-- /fade css -->
-		
-		<!-- onclick js -->
-		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
-		
-		<div class="dotsbox" style="text-align:center">
-			<span class="dot" onclick="currentSlide(1)"></span>
-			<span class="dot" onclick="currentSlide(2)"></span>
-			<span class="dot" onclick="currentSlide(3)"></span>
-			<span class="dot" onclick="currentSlide(4)"></span>
-			<span class="dot" onclick="currentSlide(5)"></span>
-		</div>
-		<!-- /onclick js -->
-	</div>
-  
-   <h3 class="release">Latest Release</h3>
-  <div class="cards">
-    <div class="card card1">
-        <div class="container">
-            <img src="las vegas.jpg" alt="las vegas">
-        </div>
-        <div class="details">
-            <h3></h3>
-            <p></p>
-        </div>
-    </div>
-    <div class="card card2">
-        <div class="container">
-            <img src="newyork.jpg" alt="New York">
-        </div>
-        <div class="details">
-            <h3></h3>
-            <p>.</p>
-        </div>
-    </div>
-    <div class="card card3">
-        <div class="container">
-            <img src="singapore.jpg" alt="Singapore">
-        </div>
-        <div class="details">
-            <h3></h3>
-            <p></p>
-        </div>
-    </div>
-    <div class="card card1">
-      <div class="container">
-          <img src="las vegas.jpg" alt="las vegas">
-      </div>
-      <div class="details">
-          <h3></h3>
-          <p></p>
-      </div>
-  </div>
-  <div class="card card2">
-      <div class="container">
-          <img src="newyork.jpg" alt="New York">
-      </div>
-      <div class="details">
-          <h3></h3>
-          <p></p>
-      </div>
-  </div>
-  <div class="card card3">
-      <div class="container">
-          <img src="singapore.jpg" alt="Singapore">
-      </div>
-      <div class="details">
-          <h3></h3>
-          <p></p>
-      </div>
-  </div>
-</div>
-<h3 class="class">categories</h3>
-
-<div class="theme-main">
-  
-  <div class="theme-content">
-      <img src="media/music themes/chill.jpg">
-      <p>Vibe</p>
-  </div>
-  <div class="theme-content">
-      <img src="media/music themes/rock.jpg">
-      <p>Rock</p>
-  </div>
-  <div class="theme-content">
-      <img src="media/music themes/love.jpg">
-      <p>Love</p>
-  </div>
-  <div class="theme-content">
-      <img src="media/music themes/pop.jpg">
-      <p>Pop</p>
-  </div>
-  <div class="theme-content">
-      <img src="media/music themes/retro.jpg">
-      <p>Retro</p>
-  </div>
-  <div class="theme-content">
-      <img src="media/music themes/workout.jpg">
-      <p>GYM</p>
-  </div>
-</div>
-</div>
-<h2 class="playlist">playlist</h2>
-<div class="playlist-content">
-  <!-- first playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <!-- index -->
-          <div>
-              01
-          </div>
-          <div class="coverer">
-              <!-- coverer class is for those items which when hovered will show an effect -->
-              <!-- in this effect, when the user hovers on the item, it will show black background -->
-              <!-- with opacity value less than 1 and a play button icon at the center -->
-              <img src="media/playlist/austin-neill-kKlVSrFbjYY-unsplash.jpg">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <!-- name and author of the song -->
-          <div>
-              <div>
-                  Alone
-              </div>
-              <p>
-                  Alan Walker
-              </p>
-          </div>
-      </div>
-      <!-- like button -->
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-  <!-- second playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <div style="margin-right:4px;">
-              02
-          </div>
-          <div class="coverer">
-              <img src="media/playlist/after.jpg">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <div>
-              <div>
-                  Alone Again
-              </div>
-              <p>
-                  Weeknd
-              </p>
-          </div>
-      </div>
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-  <!-- third playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <div style="margin-right:4px;">
-              03
-          </div>
-          <div class="coverer">
-              <img src="media/playlist/stoney.jpg">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <div>
-              <div>
-                  White Iverson
-              </div>
-              <p>
-                  Post Malone
-              </p>
-          </div>
-      </div>
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-  <!-- fourth playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <div style="margin-right:4px;">
-              04
-          </div>
-          <div class="coverer">
-              <img src="media/playlist/stoney.jpg">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <div>
-              <div>
-                  Go Flex
-              </div>
-              <p>
-                  Post Malone
-              </p>
-          </div>
-      </div>
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-  <!-- fifth playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <div style="margin-right:4px;">
-              05
-          </div>
-          <div class="coverer">
-              <img src="media/playlist/stoney.jpg">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <div>
-              <div>
-                  Better Now
-              </div>
-              <p>
-                  Post Malone
-              </p>
-          </div>
-      </div>
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-  <!-- sixth playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <div style="margin-right:4px;">
-              06
-          </div>
-          <div class="coverer">
-              <img src="media/playlist/after.jpg">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <div>
-              <div>
-                  Hardest To Love
-              </div>
-              <p>
-                  Weeknd
-              </p>
-          </div>
-      </div>
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-  <!-- seventh playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <div style="margin-right:4px;">
-              07
-          </div>
-          <div class="coverer">
-              <img src="media/playlist/beer.jpg">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <div>
-              <div>
-                  Pysco
-              </div>
-              <p>
-                  Post Malone
-              </p>
-          </div>
-      </div>
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-  <!-- eighth playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <div style="margin-right:4px;">
-              08
-          </div>
-          <div class="coverer">
-              <img src="media/playlist/beer.jpg">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <div>
-              <div>
-                  Rockstar
-              </div>
-              <p>
-                 Post Malone & 21 Savage
-              </p>
-          </div>
-      </div>
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-  <!-- ninth playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <div style="margin-right:4px;">
-              09
-          </div>
-          <div class="coverer">
-              <img src="media/playlist/stoney.jpg">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <div>
-              <div>
-                  Deja Vu
-              </div>
-              <p>
-                  Post Malone & Justin Beiber
-              </p>
-          </div>
-      </div>
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-  <!-- tenth playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <div style="margin-right:4px;">
-              10
-          </div>
-          <div class="coverer">
-              <img src="media/popular artists/billie eilish.jpg">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <div>
-              <div>
-                  Bad Guy
-              </div>
-              <p>
-                  Billie Eilish
-              </p>
-          </div>
-      </div>
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-  <!-- eleventh playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <div style="margin-right:4px;">
-              11
-          </div>
-          <div class="coverer">
-              <img src="media/songs/sorry.jpg">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <div>
-              <div>
-                  Sorry
-              </div>
-              <p>
-                  Justin Bieber
-              </p>
-          </div>
-      </div>
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-  <!-- twelfth playlist item -->
-  <div class=playlist-item>
-      <div class="left-content">
-          <div style="margin-right:4px;">
-              12
-          </div>
-          <div class="coverer">
-              <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/166e992b-4534-4bd8-bb41-3be395f82cde/daojfrr-facc1540-40b8-455f-b8b6-ba4f14738b32.png/v1/fill/w_894,h_894,q_75,strp/bts___wings_by_goldendesigncover-daojfrr.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8xNjZlOTkyYi00NTM0LTRiZDgtYmI0MS0zYmUzOTVmODJjZGUvZGFvamZyci1mYWNjMTU0MC00MGI4LTQ1NWYtYjhiNi1iYTRmMTQ3MzhiMzIucG5nIiwid2lkdGgiOiI8PTg5NCIsImhlaWdodCI6Ijw9ODk0In1dXX0.VXwplpd8rbngUYyW306GbKo_PdH8B_g3gw3fr1V0Mes">
-              <div class="play-button">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-              </div>
-          </div>
-          <div>
-              <div>
-                  Golden
-              </div>
-              <p>
-                  BTS
-              </p>
-          </div>
-      </div>
-      <div class="right-content">
-          <i class="far fa-heart"></i>
-      </div>
-  </div>
-</div>
-
-    </body>
-    </html>
-    
  
- 
- <script src="music.js"></script>
-</body>
+  <section class="home-section">
+      <div class="text">Dashboard</div>
+  </section>
+<!-- Carsouel  -->
+<section>
+
+
+  
+</section>
+  
+
+<script src="music.js"></script>
 </html>
+

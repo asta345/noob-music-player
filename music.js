@@ -4,53 +4,19 @@ let searchBtn = document.querySelector(".bx-search");
 
 closeBtn.addEventListener("click", ()=>{
   sidebar.classList.toggle("open");
-  menuBtnChange();
+  menuBtnChange();//calling the function(optional)
 });
 
-const myslide = document.querySelectorAll('.myslide'),
-	  dot = document.querySelectorAll('.dot');
-let counter = 1;
-slidefun(counter);
+searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
 
-let timer = setInterval(autoSlide, 8000);
-function autoSlide() {
-	counter += 1;
-	slidefun(counter);
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+ }
 }
-function plusSlides(n) {
-	counter += n;
-	slidefun(counter);
-	resetTimer();
-}
-function currentSlide(n) {
-	counter = n;
-	slidefun(counter);
-	resetTimer();
-}
-function resetTimer() {
-	clearInterval(timer);
-	timer = setInterval(autoSlide, 8000);
-}
-
-function slidefun(n) {
-	
-	let i;
-	for(i = 0;i<myslide.length;i++){
-		myslide[i].style.display = "none";
-	}
-	for(i = 0;i<dot.length;i++) {
-		dot[i].className = dot[i].className.replace(' active', '');
-	}
-	if(n > myslide.length){
-	   counter = 1;
-	   }
-	if(n < 1){
-	   counter = myslide.length;
-	   }
-	myslide[counter - 1].style.display = "block";
-	dot[counter - 1].className += " active";
-}
-function myFunction() {
-	var element = document.body;
-	element.classList.toggle("dark-mode");
-     }
