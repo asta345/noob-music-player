@@ -3,404 +3,57 @@
   <head>
     <meta charset="UTF-8">
     <title>MUSIC PLAYER</title>
+    <!-- metatag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  -->
+    <!-- Link css -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://kit.fontawesome.com/2d9b67a497.js" crossorigin="anonymous"></script>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- CSS only -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
    </head>
 <body>
+<!-- navbar -->
+<header class="header">
   <nav>
-  <div class="sidebar">
-    <div class="logo-details">
-        <i class='bx bx-music bx-burst bx-flip-horizontal' ></i>
-        <div class="logo_name">MusicPlayer</div>
-        <i class='bx bx-menu' id="btn" ></i>
+    <div class="menu-icon">
+       <span class="fas fa-bars"></span>
     </div>
-    <ul class="nav-list">
-      <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-         <span class="tooltip">Dashboard</span>
-      </li>
-      <li>
-       <a href="#">
-         <i class='bx bx-user' ></i>
-         <span class="links_name">User</span>
-       </a>
-       <span class="tooltip">User</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-heart' ></i>
-         <span class="links_name">Favourites</span>
-       </a>
-       <span class="tooltip">Favourites</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-cog' ></i>
-         <span class="links_name">Setting</span>
-       </a>
-       <span class="tooltip">Setting</span>
-    </li>
-    <li>
-     
-
-     <li class="profile">
-         <div class="profile-details">
-           <img src="942639.jpg" alt="profileImg">-->
-           <div class="name_job">
-             <div class="name">BOOFIL</div>
-             <div class="job">NOOB Desginer</div>
-           </div>
-         </div>
-         <i class='bx bx-log-out' id="log_out" ></i>
-     </li>
-    </ul>
-  </div>
-</nav>
-<nav role='navigation'>
-  <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-    <input type="checkbox" />
+    <div class="logo"><i class="fas fa-music"></i>
+      NINJA STUDIO
+    </div>
+    <div class="nav-items">   
+      <li><a href="#"><i class="far fa-heart fa-lg" style="color:white; margin-left:10px;"></i>Favourites</a></li>
+      <li><a href="#"></a><i class="far fa-user fa-lg " style="color: white; margin-left: 20px;">User</i></li>
+      
+    </div>
     
-    <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-    <span></span>
-    <span></span>
-    <span></span>
-    
-    <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-    <ul id="menu">
-      <a href="#"><i class='bx bxs-heart'><li>Queue</li></a>
-      <a href="#"><i class='bx bxs-heart'><li>Badboy</li></a>
-      <a href="#"><i class='bx bxs-heart'><li>Keeravani</li></a>
-      <a href="#"><i class='bx bxs-heart'><li>Run</li></a>
-     
-    </ul>
-  </div>
-</nav>
-<!-- TOP BAR -->
-   <div class="top1">
-   <a class="top2" href="#">All</a>
-   <a  class="top3 "href="#">Hindi</a>
-   <a   class="top4"href="#">1980's Hits</a>
-   <a  class="top5"href="#">Telugu</a>
-   <a  class="top6"href="#">Tamil</a>
-   <a  class="top7"href="#">English</a>
-   <a class="top8" href="#">Kannada</a>
-   <a class="top9" href="#">Malayam</a>
+    <div class="container">
+      <div class="search-box">
+         <form>
+            <button type="submit"><i class="fas fa-search"></i></button>
+            <input type="text" placeholder="search.."/>
+            <button type="submit"><i class="fas fa-microphone"></i></button>
+         </form>
+      </div>
    </div>
-   <div class="slider">
-		<!-- fade css -->
-		<div class="myslide fade">
-			<div class="txt">
-				
-				
-			</div>
-			<img src="carousel1.jpg" style="width: 100%; height: 100%;">
-		</div>
-		
-		<div class="myslide fade">
-			<div class="txt">
-			
-			</div>
-			<img src="carousel2.jpg" style="width: 100%; height: 100%;">
-		</div>
-		
-		<div class="myslide fade">
-			<div class="txt">
-				
-				
-			</div>
-			<img src="
-				  
-				  carousel3.jpg" style="width: 100%; height: 100%;">
-		</div>
-		
-		
-		
-		<!-- /fade css -->
-		
-		<!-- onclick js -->
-		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
-		
-		<div class="dotsbox" style="text-align:center">
-			<span class="dot" onclick="currentSlide(1)"></span>
-			<span class="dot" onclick="currentSlide(2)"></span>
-			<span class="dot" onclick="currentSlide(3)"></span>
-			
-			
-		</div>
-		<!-- /onclick js -->
-	</div>
-  
-   <h3 class="release">Latest Release</h3>
-  <div class="cards">
-    <div class="card card1">
-        <div class="container">
-            <img src="I'll Wait.jpg" alt="las vegas">
-        </div>
-        <div class="details">
-            <h3></h3>
-            <h3></h3>
-        </div>
-    </div>
-    <div class="card card2">
-        <div class="container">
-            <img src="ily.jpg" alt="New York">
-        </div>
-        <div class="details">
-            <h3></h3>
-            <p>.</p>
-        </div>
-    </div>
-    <div class="card card3">
-        <div class="container">
-            <img src="roar.jpg" alt="Singapore">
-        </div>
-        <div class="details">
-            <h3></h3>
-            <p></p>
-        </div>
-    </div>
-    <div class="card card1">
-      <div class="container">
-          <img src="toosie slide.jpg" alt="las vegas">
-      </div>
-      <div class="details">
-          <h3></h3>
-          <p></p>
-      </div>
-  </div>
-  <div class="card card2">
-      <div class="container">
-          <img src="qurantine clean.jpg" alt="New York">
-      </div>
-      <div class="details">
-         
-      </div>
-  </div>
-  <div class="card card3">
-      <div class="container">
-          <img src=uptown funk.png" alt="Singapore">
-      </div>
-      <div class="details">
-         
-      </div>
-  </div>
-</div>
-<h3 class="Class">Categories</h3>
+     
 
-<div class="theme-main">
-  
-  <div class="theme-content">
-      <img src="chill.jpg">
-      <p>Vibe</p>
-  </div>
-  <div class="theme-content">
-      <img src="rock.jpg">
-      <p>Rock</p>
-  </div>
-  <div class="theme-content">
-      <img src="love.jpg">
-      <p>Love</p>
-  </div>
-  <div class="theme-content">
-      <img src="pop.jpg">
-      <p>Pop</p>
-  </div>
-  <div class="theme-content">
-      <img src="retro.jpg">
-      <p>Retro</p>
-  </div>
-  <div class="theme-content">
-      <img src="workout.jpg">
-      <p>GYM</p>
-  </div>
-</div>
-</div>
-<aside id="play">
-    <h3>Playlist</h3>
-<div class="player">
+ </nav>
+  </header>
+  <main>
+   <div class="container-2">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      
+   </div>
 
-    <div class="large-toggle-btn">
-      <i class="large-play-btn"><span class="screen-reader-text">Large toggle button</span></i>
-    </div>
-    <!-- /.play-box -->
+   
+  </main>
 
-    <div class="info-box">
-      <div class="track-info-box">
-        <div class="track-title-text"></div>
-        <div class="audio-time">
-          <span class="current-time">00:00</span> /
-          <span class="duration">00:00</span>
-        </div>
-      </div>
-      <!-- /.info-box -->
-
-      <div class="progress-box">
-        <div class="progress-cell">
-          <div class="progress">
-            <div class="progress-buffer"></div>
-            <div class="progress-indicator"></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!-- /.progress-box -->
-
-    <div class="controls-box">
-      <i class="previous-track-btn disabled"><span class="screen-reader-text">Previous track button</span></i>
-      <i class="next-track-btn"><span class="screen-reader-text">Next track button</span></i>
-    </div>
-    <!-- /.controls-box -->
-
-  </div>
-  <!-- /.player -->
-
-  <div class="play-list">
-
-    <div class="play-list-row" data-track-row="1">
-      <div class="small-toggle-btn">
-        <i class='bx bx-play ' ></i><span class="screen-reader-text">Small toggle button</span></i>
-      </div>
-      <div class="track-number">
-        1.
-      </div>
-      <div class="track-title">
-        <a class="playlist-track" href="#" data-play-track="1">Calexico - Across The Wire</a>
-      </div>
-    </div>
-    <div class="play-list-row" data-track-row="2">
-      <div class="small-toggle-btn">
-        <i class='bx bx-play ' ></i><span class="screen-reader-text">Small toggle button</span></i>
-      </div>
-      <div class="track-number">
-        2.
-      </div>
-      <div class="track-title">
-        <a class="playlist-track" href="#" data-play-track="2">Ryan Adams &amp; The Cardinals - Cold Roses</a>
-      </div>
-    </div>
-    <div class="play-list-row" data-track-row="3">
-      <div class="small-toggle-btn">
-        <i class='bx bx-play ' ></i><span class="screen-reader-text">Small toggle button</span></i>
-      </div>
-      <div class="track-number">
-        3.
-      </div>
-      <div class="track-title">
-        <a class="playlist-track" href="#" data-play-track="3">The Slackers - Married Girl</a>
-      </div>
-    </div>
-    <div class="play-list-row" data-track-row="4">
-      <div class="small-toggle-btn">
-        <i class='bx bx-play ' ></i><span class="screen-reader-text">Small toggle button</span></i>
-      </div>
-      <div class="track-number">
-        4.
-      </div>
-      <div class="track-title">
-        <a class="playlist-track" href="#" data-play-track="4">Blitzen Trapper - Saturday Night</a>
-      </div>
-    </div>
-    <div class="play-list-row" data-track-row="5">
-      <div class="small-toggle-btn">
-        <i class='bx bx-play ' ></i><span class="screen-reader-text">Small toggle button</span></i>
-      </div>
-      <div class="track-number">
-        5.
-      </div>
-      <div class="track-title">
-        <a class="playlist-track" href="#" data-play-track="5">The Samples - Feel Us Shaking</a>
-      </div>
-    </div>
-    <div class="play-list-row" data-track-row="6">
-      <div class="small-toggle-btn">
-        <i class='bx bx-play ' ></i><span class="screen-reader-text">Small toggle button</span></i>
-      </div>
-      <div class="track-number">
-        6.
-      </div>
-      <div class="track-title">
-        <a class="playlist-track" href="#" data-play-track="6">Mike Doughty - American Car</a>
-      </div>
-    </div>
-    <div class="play-list-row" data-track-row="7">
-      <div class="small-toggle-btn">
-        <i class='bx bx-play ' ></i><span class="screen-reader-text">Small toggle button</span></i>
-      </div>
-      <div class="track-number">
-        7.
-      </div>
-      <div class="track-title">
-        <a class="playlist-track" href="#" data-play-track="7">G. Love &amp; Special Sauce - Dreamin'</a>
-      </div>
-    </div>
-    <div class="play-list-row" data-track-row="8">
-      <div class="small-toggle-btn">
-        <i class='bx bx-play ' ></i><span class="screen-reader-text">Small toggle button</span></i>
-      </div>
-      <div class="track-number">
-        8.
-      </div>
-      <div class="track-title">
-        <a class="playlist-track" href="#" data-play-track="8">Guster - Amsterdam</a>
-      </div>
-    </div>
-    <div class="play-list-row" data-track-row="9">
-      <div class="small-toggle-btn">
-        <i class='bx bx-play ' ></i><span class="screen-reader-text">Small toggle button</span></i>
-      </div>
-      <div class="track-number">
-        9.
-      </div>
-      <div class="track-title">
-        <a class="playlist-track" href="#" data-play-track="9">O.A.R. - About Mr. Brown</a>
-      </div>
-    </div>
-    <div class="play-list-row" data-track-row="10">
-      <div class="small-toggle-btn">
-        <i class='bx bx-play ' ></i><span class="screen-reader-text">Small toggle button</span></i>
-      </div>
-      <div class="track-number">
-        10.
-      </div>
-      <div class="track-title">
-        <a class="playlist-track" href="#" data-play-track="10">My Morning Jacket - Phone Went West</a>
-      </div>
-    </div>
-
-  </div>
-</aside>
-  
-</div>
  <script src="music.js"></script>
 </body>
 </html>
